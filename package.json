@@ -3,17 +3,39 @@
   "description": "A minimalist Ghost theme for personal site",
   "version": "0.0.1",
   "license": "MIT",
+  "engines": {
+    "ghost": ">=5.0.0"
+  },
   "author": {
     "name": "PJ",
-      "email": "hello@pjventures.xyz"
+    "email": "hello@pjventures.xyz"
   },
   "screenshots": {
-      "desktop": "assets/screenshot-desktop.jpg",
-      "mobile": "assets/screenshot-mobile.jpg"
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "zip": "gulp zip",
+    "test": "gscan .",
+    "test:ci": "gscan --fatal --verbose .",
+    "pretest": "gulp build",
+    "preship": "yarn test",
+    "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
+    "postship": "git fetch && gulp release"
   },
   "config": {
-      "posts_per_page": 10,
-      "image_sizes": {},
-      "card_assets": true
-  }
+    "posts_per_page": 10,
+    "image_sizes": {},
+    "card_assets": true
+  },
+  "dependencies": {
+    "gscan": "^4.37.6",
+    "gulp": "^4.0.2"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ]
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{@site.title}}</title>
+    <meta name="description" content="{{@site.description}}">
+    
+    <!-- Add your CSS stylesheets here -->
+    <link rel="stylesheet" href="{{asset "assets/css/reset.css"}}">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="{{asset "assets/css/screen.css"}}">
+
+    <!-- Ghost-specific metadata -->
+    <link rel="canonical" href="{{@site.url}}">
+    <meta name="generator" content="Ghost {{@site.version}}">
+    
+    <!-- Include Ghost's default structured data -->
+    {{!-- {{ghost_head}} --}}
+</head>
+<body>
+    <header>
+        <h1 class="site-header"><a href="{{@site.url}}">{{@site.title}}</a></h1>
+        
+        <!-- Add navigation menu here -->
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="{{@site.url}}/writing">Writing</a></li>
+                <li><a href="{{@site.url}}/reading">Reading</a></li>
+                <li><a href="{{@site.url}}/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{!-- The content of your individual templates (e.g., index.hbs, post.hbs, page.hbs) will be inserted here --}}
+        {{{body}}}
+    </main>
+
+    <footer>
+        <p>&copy; {{year}} {{@site.title}}</p>
+    </footer>
+</body>
+</html>
