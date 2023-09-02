@@ -10,6 +10,12 @@ body {
   padding: 16px;
 }
 
+/* Necessary CSS */
+.kg-width-full img,
+.kg-width-wide img{
+  color: white;
+}
+
 /* Site title */
 .site-header {
   margin: 20px 0px;
@@ -77,4 +83,12 @@ body {
 .blog-card p,
 .blog-card div {
   margin-bottom: 12px;
+}
+
+/* Post Page */
+article * {
+  margin-bottom: 12px;
+}
+.post-meta a {
+  color: #e8d6b3;
 }
