@@ -92,3 +92,7 @@ article * {
 .post-meta a {
   color: #e8d6b3;
 }
+
+.post-meta span {
+  font-style: italic;
+}
