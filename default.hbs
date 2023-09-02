@@ -17,7 +17,7 @@
     <meta name="generator" content="Ghost {{@site.version}}">
     
     <!-- Include Ghost's default structured data -->
-    {{!-- {{ghost_head}} --}}
+    {{ghost_head}}
 </head>
 <body>
     <header>
@@ -27,8 +27,7 @@
         <nav class="nav-bar">
             <ul>
                 <li><a href="{{@site.url}}/writing">Writing</a></li>
-                <li><a href="{{@site.url}}/reading">Reading</a></li>
-                <li><a href="{{@site.url}}/contact">Contact</a></li>
+                {{!-- <li><a href="{{@site.url}}/reading">Reading</a></li> --}}
             </ul>
         </nav>
     </header>
@@ -41,5 +40,6 @@
     <footer>
         <p>&copy; {{year}} {{@site.title}}</p>
     </footer>
+    {{ghost_foot}}
 </body>
 </html>
