@@ -1,0 +1,43 @@
+{{!< default}} <main id="site-main">
+  <p>Hi there</p>
+  {{#foreach posts}}
+  <p>There is a post here.</p>
+  {{/foreach}}
+  <div class="container">
+
+    <div class="p-5">
+      {{!-- Iterate through each posts --}}
+      {{#foreach posts}}
+
+      <article class="{{post_class}}">
+        <div class="card-body">
+
+          {{!-- Display primary tag of the post if exists--}}
+          {{#if primary_tag}}
+          <a href="{{primary_tag.url}}" class="badge badge-success">
+            {{primary_tag.name}}
+          </a>
+          {{/if}}
+
+          <div class="blog-title">
+            <a href="{{url}}">
+              {{!-- Post title --}}
+              <h3>{{title}}</h3>
+            </a>
+          </div>
+
+          {{!-- Displays post excerpt. Sets to display max 170 chars if not set --}}
+          <p>{{excerpt characters="170"}}</p>
+
+          <div>
+            <span> - Published: {{date published_at }}</span>
+          </div>
+
+        </div>{{!--/.post-card-content--}}
+      </article>
+
+      {{/foreach}}
+    </div>
+
+  </div>
+  </main>

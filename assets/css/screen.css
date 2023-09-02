@@ -59,3 +59,22 @@ body {
 .indv-section a:hover {
   text-decoration: underline;
 }
+
+/* Blog section */
+.blog-content {
+  margin: 12px 0px;
+}
+
+.blog-card {
+  margin: 16px 0px;
+}
+
+.blog-card a {
+  color: #e8d6b3;
+}
+
+.blog-card .blog-title,
+.blog-card p,
+.blog-card div {
+  margin-bottom: 12px;
+}
