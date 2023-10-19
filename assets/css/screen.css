@@ -96,3 +96,23 @@ article * {
 .post-meta span {
   font-style: italic;
 }
+
+/* YouTube videos */
+iframe[src*="youtube.com"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  body {
+    width: 90%;
+  }
+
+  .kg-width-full img,
+  .kg-width-wide img {
+    max-width: 100%;
+    height: auto;
+  }
+}
